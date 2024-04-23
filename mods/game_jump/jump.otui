@@ -1,0 +1,49 @@
+MainWindow
+  id: jumpMain
+  !text: tr('Jump')
+  size: 235 215
+  @onEscape: modules.jump.closing()
+
+  TabBar
+    id: allTabs
+    anchors.top: parent.top
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    anchors.left: parent.left
+
+  Panel
+    id: optionsTabContent
+    anchors.top: allTabs.top
+    anchors.left: allTabs.left
+    anchors.right: allTabs.right
+    anchors.bottom: allTabs.bottom
+    margin-top: 20
+    margin-bottom: 20
+
+  Button
+    id: closeButton
+    !text: tr('Close')
+    width: 200
+    anchors.left: parent.left
+    anchors.bottom: parent.bottom
+    @onClick: modules.jump.closing()
+
+  Button
+    id: jumpButton
+    !text: tr('Jump!')
+    width: 50
+    anchors.right: parent.right
+    anchors.top: parent.top
+    margin-top: 50
+    margin-right: 10
+    @onClick: modules.jump.jumping()
+
+  Button
+    id: jumped
+    !text: tr('Jump!')
+    width: 50
+    anchors.right: parent.right
+    anchors.top: parent.top
+    margin-top: 50
+    margin-right: 10
+    @onClick: modules.jump.jumping()

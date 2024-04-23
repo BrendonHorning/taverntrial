@@ -1,0 +1,14 @@
+Module
+  name: jump
+  description: Q7
+  author: -
+  website: -
+  version: 1
+
+  autoload: true
+  autoload-priority: 1000
+  sandboxed: true
+  dependencies: [ game_interface ]
+  scripts: [ jump ]
+  @onLoad: init()
+  @onUnload: terminate()
